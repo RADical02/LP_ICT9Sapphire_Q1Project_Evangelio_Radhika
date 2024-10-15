@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEE-EX-TEE PH | Bake with care</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* AliceBlue background */
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #87CEEB; /* SkyBlue */
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .click, .clicktwo {
+            text-align: center;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .searchtype {
+            padding: 10px;
+            font-size: 14px;
+            width: 400px;
+            border: 2px solid #1E90FF; /* DodgerBlue */
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .search-button:hover {
+            background-color: #4682B4; /* SteelBlue */
+        }
+
+        .content {
+            margin-top: 100px; 
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .half {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ADD8E6;
+            width: 45%;
+            padding-right: 5px;
+        }
+
+        .half p {
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            color: #1E90FF;
+        }
+
+        .half ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            color: #333;
+        }
+
+        .recipe-one, .recipe-two {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .r, .w {
+            flex: 30%;
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            gap: 5px;
+        }
+
+        .r img, .w img {
+            width: 70%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .r p, .w p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .r p:last-child, .w p:last-child {
+            font-weight: bold;
+            color: #4682B4;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            padding: 20px;
+            background-color: #ADD8E6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .right img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #1E90FF;
+        }
+
+        .right h3 {
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1E90FF;
+        }
+
+        .right p {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="click">
+        <h5>Your Recipes</h5>
+        <h5>Start baking classes here</h5>
+    </div>
+
+    <div class="search">
+        <form action="/search" method="GET">
+            <input type="text" class="searchtype" name="query" placeholder="Are you craving anything today?">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+
+    <div class="clicktwo">
+        <h5>Log In</h5>
+        <h5>Sign up</h5>
+    </div>
+</header>
+
+<div class="content">
+
+    <div class="half">
+        <p>Need to half your recipe?</p>
+        <br>
+        <ul>
+            <li>1/4 Cup = 2 Tbs.</li>
+            <li>1/3 Cup = 2 Tbs. & 2 tsp.</li>
+            <li>1/2 Cup = 1/4 Cup</li>
+            <li>2/3 Cup = 1/3 Cup</li>
+            <li>1 Tbs. = 1 1/2 tsp.</li>
+            <li>1 tsp. = 1/2 tsp.</li>
+            <li>1/2 tsp. = 1/4 tsp.</li>
+        </ul>
+    </div>
+
+    <div class="recipe-one">
+        <div class="r">
+            <img src="cookie.jpg" alt="Vanilla Cookie">
+            <p>Vanilla Cookie with Strawberry Frosting</p>
+            <p>₩ 10,000</p>
+        </div>
+        <div class="r">
+            <img src="bagel.jpg" alt="Cinnamon Bagel">
+            <p>Cinnamon Bagel Treat</p>
+            <p>₩ 10,000</p>
+        </div>
+        <div class="r">
+            <img src="donut.jpg" alt="Chocolate Donut">
+            <p>Chocolate Donut</p>
+            <p>₩ 10,500</p>
+        </div>
+    </div>
+
+        <div class="recipe-two">
+        <div class="w">
+            <img src="chocopao.jpg" alt="Chocolate Siopao">
+            <p>Chocolate Siopao</p>
+            <p>₩ 20,500</p>
+        </div>
+        <div class="w">
+            <img src="cupcake.jpg" alt="Chocolate Cupcake">
+            <p>Chocolate Cupcake</p>
+            <p>₩ 9,000</p>
+        </div>
+        <div class="w">
+            <img src="eggavocado.jpg" alt="Egg Avocado Toast">
+            <p>Egg Avocado Toast</p>
+            <p>₩ 20,500</p>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="right">
+    <img src="soob2.jpg" alt="Ilovechoisoobin">
+    <h3>Get To Know How Our Website Was Made..</h3>
+    <p>Choi Soobin, a renowned baker and singer, has always wanted to share his recipes with people who can't visit Korea to taste his treats. He decided to create an online platform to share his recipes and let others contribute as well!</p>
+</div>
+
+</body>
+</html>
